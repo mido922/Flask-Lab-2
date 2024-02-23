@@ -1,4 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask import url_for
 
 db=SQLAlchemy()
 
@@ -19,3 +20,5 @@ class Book(db.Model):
     @classmethod
     def get_all_objects(cls):
         return cls.query.all()
+    
+    

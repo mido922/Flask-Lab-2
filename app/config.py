@@ -12,6 +12,7 @@ class DevelopmentConfig(Config):
 class ProductionConfig(Config):
     DEBUG=False
     SQLALCHEMY_DATABASE_URI='postgresql://postgres:123@localhost:5432/FlaskSession2'
+    UPLOAD_FOLDER= "static/images"
     pass
 
 config_options = {

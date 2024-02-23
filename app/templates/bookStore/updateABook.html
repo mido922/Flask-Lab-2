@@ -1,0 +1,21 @@
+{% extends "bookStore/base.html" %}
+
+{% block content %}
+
+<h1> You are updating book ID: {{book.id}} with name {{book.name}} </h1>
+
+<form action="/books/updateABook/{{book.id}}" enctype=multipart/form-data method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="fname" name="name" value="Test Book"><br>
+    <label for="name">Details:</label><br>
+    <input type="text" id="fname" name="bookDescription" value="Test"><br>
+    <label for="name">Number of Pages:</label><br>
+    <input type="text" id="fname" name="numberOfPages" value="500"><br>
+    <label for="name">Price:</label><br>
+    <input type="text" id="fname" name="price" value="1234"><br>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+        
+{% endblock content %}

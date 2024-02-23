@@ -1,0 +1,15 @@
+{% extends "bookStore/base.html" %}
+
+{% block content %}
+
+Name: {{selectedBook}}
+<br>
+Description: {{selectedBook.bookDescription}}
+<br>
+Price: {{selectedBook.price}}
+<br>
+Created at: {{selectedBook.created_at}}
+<br>
+Updated at: {{selectedBook.updated_at}}
+        
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "bookStore/base.html" %}
+
+{% block content %}
+
+<form action="/books/addNewBook" enctype=multipart/form-data method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="fname" name="name" value="Test Book"><br>
+    <label for="name">Details:</label><br>
+    <input type="text" id="fname" name="bookDescription" value="Test"><br>
+    <label for="name">Number of Pages</label><br>
+    <input type="text" id="fname" name="numberOfPages" value="500"><br>
+    <label for="name">Price:</label><br>
+    <input type="text" id="fname" name="price" value="1234"><br>
+    <label for="image">Image:</label><br>
+    <input type="file" id="lname" name="file" value="Test">
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+        
+{% endblock content %}
