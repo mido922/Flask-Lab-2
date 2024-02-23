@@ -14,4 +14,12 @@ def create_app(config_name="prd"):
     db.init_app(app)
     migrate = Migrate(app, db, render_as_batch=True)
 
+    from app.bookStore.views import get_index
+    app.add_url_rule("/", view_func=get_index,endpoint="landing")
+
+
+    from app.bookStore import bookStore_blueprint
+    app.register_blueprint(bookStore_blueprint)
+
+
     return app
